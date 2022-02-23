@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Push Docker image') {
             environment {
-                DOCKER_HUB_LOGIN = credentials('docker-hub')
+                DOCKER_HUB_LOGIN = credentials('bushrakaz')
             }
             steps {
                 bat 'docker login --username=%DOCKER_HUB_LOGIN_USR --password=%DOCKER_HUB_LOGIN_PSW'
