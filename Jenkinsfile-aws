@@ -35,7 +35,7 @@ pipeline {
             }
             steps {
                 withAWS(credentials: 'aws-credentials', region: env.AWS_REGION) {
-                    bat './gradlew awsCfnMigrateStack awsCfnWaitStackComplete -PsubnetId=%SUBNET_ID% -PdockerHubUsername=%DOCKER_HUB_LOGIN_USR% -Pregion=%AWS_REGION%'
+                    bat './gradlew awsCfnMigrateStack awsCfnWaitStackComplete -PsubnetId=subnet-b93c37d1 -PdockerHubUsername=%DOCKER_HUB_LOGIN_USR% -Pregion=ap-south-1'
                 }
             }
         }
